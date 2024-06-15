@@ -10,6 +10,12 @@ return {
       },
     },
     {
+        "zbirenbaum/copilot-cmp",
+        config = function ()
+          require("copilot_cmp").setup()
+        end,
+    },
+    {
       "hrsh7th/nvim-cmp",
       config = function()
         local cmp = require("cmp")
@@ -35,6 +41,7 @@ return {
           sources = cmp.config.sources({
             { name = "nvim_lsp" },
             { name = "luasnip" }, -- For luasnip users.
+            { name = "copilot" }
           }, {
             { name = "buffer" },
           }),
